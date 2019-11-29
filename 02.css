@@ -21,6 +21,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 }
 header,
 footer {
@@ -34,3 +35,38 @@ header {
 footer {
   align-items: flex-end;
 }
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 50px;
+  background: red;
+  box-shadow:
+    24px 24px rgba(255, 0, 0, 0.5);
+}
+.circle:nth-of-type(even) {
+  background: white;
+  box-shadow:
+    24px 24px rgba(255, 255, 255, 0.5);
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* EOF */
