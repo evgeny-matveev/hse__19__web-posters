@@ -1,0 +1,81 @@
+@import "reset.css";
+
+@font-face {
+  font-family: "Ruslan Display";
+  font-weight: bold;
+  src: url(fonts/RuslanDisplay.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: #000;
+  font-family: "Ruslan Display", sans-serif;
+  font-weight: bold;
+}
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.box {
+  width: 90vw;
+  height: 30vh;
+  font-size: 11vw;
+  letter-spacing: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.is-white {
+  background: white;
+  animation: shake 1.8s cubic-bezier(.25,.86,.74,.09) infinite;
+}
+.is-blue {
+  background: blue;
+  animation: shake 2s ease-in reverse infinite;
+}
+.is-red {
+  background: red;
+  animation: shake 2.2s ease-in-out alternate infinite;
+}
+.is-white p,
+.is-blue p {
+  margin-bottom: -4vh;
+}
+.is-red p {
+  font-family: monospace;
+  font-size: 30vh;
+}
+body > p {
+  color: #fff;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5vw) rotate(-1deg);
+  }
+  25% {
+    transform: translateX(5vw) rotate(1deg);
+  }
+  50% {
+    transform: translateX(-5vw) rotate(0);
+  }
+  75% {
+    transform: translateX(5vw) rotate(1deg);
+  }
+  100% {
+    transform: translateX(-5vw) rotate(-1deg);
+  }
+}
+
+
+
+
+
+
+/* EOF */
