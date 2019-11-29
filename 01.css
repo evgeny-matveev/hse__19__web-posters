@@ -14,6 +14,7 @@ body {
   background: #000;
   font-family: "Ruslan Display", sans-serif;
   font-weight: bold;
+  overflow: hidden;
 }
 main {
   height: 100vh;
@@ -36,7 +37,7 @@ main {
   animation: shake 1.8s cubic-bezier(.25,.86,.74,.09) infinite;
 }
 .is-blue {
-  background: blue;
+  background: #0066FF;
   animation: shake 2s ease-in reverse infinite;
 }
 .is-red {
@@ -53,6 +54,14 @@ main {
 }
 body > p {
   color: #fff;
+  font-size: 3vw;
+  letter-spacing: 1vw;
+  line-height: 1.4;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: glitch 5s linear infinite;
 }
 
 @keyframes shake {
@@ -72,7 +81,33 @@ body > p {
     transform: translateX(-5vw) rotate(-1deg);
   }
 }
-
+@keyframes glitch {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 0;
+  }
+}
 
 
 
