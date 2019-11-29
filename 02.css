@@ -43,6 +43,7 @@ footer {
   background: red;
   box-shadow:
     24px 24px rgba(255, 0, 0, 0.5);
+  animation: rotate 10s linear reverse infinite;
 }
 .circle:nth-of-type(even) {
   background: white;
@@ -59,7 +60,21 @@ footer {
   bottom: 0;
   left: 0;
 }
+.one {
+  animation: rotate 10s linear infinite;
+}
+.two {
+  animation: rotate 10s linear 2.5s infinite;
+}
+.two .circle {
+  animation: rotate 10s linear 2.5s reverse infinite;
+}
 
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 
